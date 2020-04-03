@@ -1,9 +1,6 @@
 ﻿using MassTransit.Serialization;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace MassTransit.NoEnvelopeMessageDeserializer
+namespace MassTransit
 {
     public static class ReceiveEndpointConfiguratorExtensions
     {
