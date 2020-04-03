@@ -24,4 +24,4 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Publish NuGet
-      run: dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json -k ${{nugetapikey}}
+      run: dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json -k ${{ nugetapikey }}
