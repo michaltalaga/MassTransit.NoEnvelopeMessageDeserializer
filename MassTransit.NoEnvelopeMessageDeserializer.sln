@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransit.NoEnvelopeMessageDeserializer", "MassTransit.NoEnvelopeMessageDeserializer\MassTransit.NoEnvelopeMessageDeserializer.csproj", "{766625A4-47E8-4344-B6C5-F08CD5F1372D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassTransit.NoEnvelopeMessageDeserializer", "MassTransit.NoEnvelopeMessageDeserializer\MassTransit.NoEnvelopeMessageDeserializer.csproj", "{766625A4-47E8-4344-B6C5-F08CD5F1372D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{0AC4F4C3-32B4-4045-84E6-D69CD99FC8A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{62C781E2-0E40-4B2F-821E-FFBF0315A6B6}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnetcore.yml = .github\workflows\dotnetcore.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +25,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{62C781E2-0E40-4B2F-821E-FFBF0315A6B6} = {0AC4F4C3-32B4-4045-84E6-D69CD99FC8A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C8EDB08-FC25-4510-BC6B-F5D5FEC96619}
