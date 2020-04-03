@@ -24,4 +24,4 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Publish NuGet
-      run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.nugetapikey}}
+      run: dotnet nuget push MassTransit.NoEnvelopeMessageDeserializer/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.nugetapikey}}
