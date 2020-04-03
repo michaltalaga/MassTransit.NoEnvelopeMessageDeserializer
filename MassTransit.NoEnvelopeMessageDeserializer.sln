@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransit.NoEnvelopeMessageDeserializer", "MassTransit.NoEnvelopeMessageDeserializer\MassTransit.NoEnvelopeMessageDeserializer.csproj", "{766625A4-47E8-4344-B6C5-F08CD5F1372D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{766625A4-47E8-4344-B6C5-F08CD5F1372D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766625A4-47E8-4344-B6C5-F08CD5F1372D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766625A4-47E8-4344-B6C5-F08CD5F1372D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766625A4-47E8-4344-B6C5-F08CD5F1372D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C8EDB08-FC25-4510-BC6B-F5D5FEC96619}
+	EndGlobalSection
+EndGlobal
