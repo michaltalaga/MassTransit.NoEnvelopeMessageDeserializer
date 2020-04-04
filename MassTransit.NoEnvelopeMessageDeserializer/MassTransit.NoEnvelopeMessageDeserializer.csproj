@@ -3,9 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.5</Version>
+    <Version>0.0.6</Version>
     <Authors>Michal Talaga</Authors>
     <Description>Hacky hack to allow MassTransit processing of messages not wrapped in envelopes</Description>
+    <PackageProjectUrl>https://github.com/michaltalaga/MassTransit.NoEnvelopeMessageDeserializer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/michaltalaga/MassTransit.NoEnvelopeMessageDeserializer</RepositoryUrl>
+    <PackageTags>MassTransit</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
