@@ -19,17 +19,22 @@ namespace MassTransit.NoEnvelopeMessageDeserializer
         {
             var deserializer = JsonMessageSerializer.Deserializer;
             var messageEncoding = GetMessageEncoding(receiveContext);
-            using var body = receiveContext.GetBodyStream();
-            using var reader = new StreamReader(body, messageEncoding, false, 1024, true);
-            using var jsonReader = new JsonTextReader(reader);
-
-            var msg = deserializer.Deserialize<JToken>(jsonReader);
-            var envelope = new MsgEnvelope
+            using (var body = receiveContext.GetBodyStream())
             {
-                Message = msg,
-                MessageType = new string[0],
-            };
-            return new GenericJsonConsumeContext(JsonMessageSerializer.Deserializer, receiveContext, envelope);
+                using (var reader = new StreamReader(body, messageEncoding, false, 1024, true))
+                {
+                    using (var jsonReader = new JsonTextReader(reader))
+                    {
+                        var msg = deserializer.Deserialize<JToken>(jsonReader);
+                        var envelope = new MsgEnvelope
+                        {
+                            Message = msg,
+                            MessageType = new string[0],
+                        };
+                        return new GenericJsonConsumeContext(JsonMessageSerializer.Deserializer, receiveContext, envelope);
+                    }
+                }
+            }
         }
         static Encoding GetMessageEncoding(ReceiveContext receiveContext)
         {
@@ -88,12 +93,14 @@ namespace MassTransit.NoEnvelopeMessageDeserializer
             }
             public override bool TryGetMessage<T>(out ConsumeContext<T> message)
             {
-                using JsonReader jsonReader = messageToken.CreateReader();
+                using (JsonReader jsonReader = messageToken.CreateReader())
+                {
 
-                var obj = deserializer.Deserialize(jsonReader, typeof(T));
-                message = new MessageConsumeContext<T>(this, (T)obj);
+                    var obj = deserializer.Deserialize(jsonReader, typeof(T));
+                    message = new MessageConsumeContext<T>(this, (T)obj);
 
-                return true;
+                    return true;
+                }
             }
             static JToken GetMessageToken(object message)
             {

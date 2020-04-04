@@ -7,7 +7,7 @@ namespace MassTransit
         public static void UseNoEnvelopeMessageDeserializer(this IReceiveEndpointConfigurator receiveEndpointConfigurator)
         {
             receiveEndpointConfigurator.ClearMessageDeserializers();
-            receiveEndpointConfigurator.AddMessageDeserializer(JsonMessageSerializer.JsonContentType, () => new NoEnvelopeMessageDeserializer());
+            receiveEndpointConfigurator.AddMessageDeserializer(JsonMessageSerializer.JsonContentType, () => new NoEnvelopeMessageDeserializer.NoEnvelopeMessageDeserializer());
         }
     }
 }
